@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .menu-area a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: black;
+            height: 50px;
+            text-decoration: none;
+        }
+
+        .menu-area a:hover {
+            background: tomato;
+            color: #fff;
+
+        }
+
+        .menu-area ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu-area li {
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+
+        .menu-area li:hover .dropdown-1>li {
+            top: 0;
+            display: block;
+        }
+
+        .dropdown-1 li {
+            display: none;
+            position: relative;
+        }
+
+        .dropdown-1 {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .dropdown-1 li:hover {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="menu-area">
+        <ul>
+            <li> <a href="#">Inicio</a> </li>
+            <li><a href="#">temas</a>
+                <ul class="dropdown-1">
+                    <li><a href="#">tema1</a></li>
+                    <li><a href="#">tema 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Recursos</a>
+                <ul class="dropdown-1">
+                    <li> <a href="#">Recurso 1</a> </li>
+                    <li><a href="#">Recurso 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Autor</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
